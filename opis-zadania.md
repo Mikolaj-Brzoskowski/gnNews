@@ -13,7 +13,7 @@ Ekran aplikacji powinien być podzielony na:
 
 Powinien zawierać:
 
-- nazwę naszej wspaniałej aplikacji, która będzie linkiem przekierowującym na główną stronę aplikacji
+- ~~nazwę naszej wspaniałej aplikacji, która będzie linkiem przekierowującym na główną stronę aplikacji~~
 - przycisk umożliwiający zmianę widoku wyświetlanych newsów (możliwe opcje: lista, kafelki) - do przechowywania stanu wybranej opcji wykorzystaj redux'a
 - przycisk, po którego przyciśnięciu otworzy się popup. Niech treścią popupu będzie opis tego, co sprawiło Ci największą trudność w tym zadaniu oraz co sprawiło Ci największą frajdę.
 
