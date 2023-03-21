@@ -7,14 +7,16 @@ import { Container } from 'react-bootstrap';
 
 function App() {
   return (
+    <div className="d-flex flex-column app">
     <Container>
-        <Header/>
-        <Routes>
-          <Route path="/" element={<Navigate to="/country/EN" replace={true} />}/>
-          <Route path="/country/:country_code" element={<Main/>} />
-        </Routes>
-        <Footer/>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Navigate to="/country/EN" replace={true} />}/>
+        <Route path="/country/:country_code" element={<Main/>} />
+      </Routes>
     </Container>
+    <Footer/>
+    </div>
   );
 }
 
