@@ -40,7 +40,7 @@ Kliknięcie na danego newsa powinno otworzyć popupa z jego treścią, a także 
 
 Powinien zawierać:
 
-- aktualną godzinę
+- ~~aktualną godzinę~~
 - liczbę artykułów, które są wyświetlane w głównym contencie
 
 ## Zadanie dodatkowe
