@@ -1,9 +1,13 @@
 import React from 'react'
-import Header from '../Header'
+import { Col, Row } from 'react-bootstrap'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Row>
+      <Col>
+        <p>Home</p>
+      </Col>
+    </Row>
   )
 }
 
