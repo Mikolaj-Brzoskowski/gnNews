@@ -1,16 +1,20 @@
 import React from 'react'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import Home from '../components/Home'
+import { useParams } from "react-router-dom"
+
+type MainParams = {
+    country_code: string
+}
 
 const Main = () => {
-  return (
-    <div>
-        <Header/>
-        <Home/>
-        <Footer/>
-    </div>
-  )
+
+    const { country_code } = useParams<MainParams>()
+
+    return (
+        <>
+            <Home/>
+        </>
+    )
 }
 
 export default Main
