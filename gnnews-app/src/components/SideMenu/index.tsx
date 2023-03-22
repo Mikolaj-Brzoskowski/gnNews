@@ -14,6 +14,11 @@ const SideMenu = () => {
   const handleShow = () => setShow(true);
   const navigate = useNavigate();
 
+  const handleClick = (countryCode: string) => {
+    navigate(`/country/${countryCode}`); 
+    handleClose();
+  }
+
   return (
     <>
       <Button onClick={handleShow} variant="outline-dark" className="rounded-circle p-2 border-0">
@@ -30,7 +35,7 @@ const SideMenu = () => {
         <Offcanvas.Body className="w-100">
           <ListGroup variant="flush">
             {countries.sort().map( (country) => (
-              <ListGroup.Item className='d-flex flex-row align-items-center' action onClick={() => navigate(`/country/${country.code}`)}>
+              <ListGroup.Item className='d-flex flex-row align-items-center' action onClick={() => handleClick(country.code)}>
                 <div className={`fib fi-${country.code.toLowerCase()} h-25 w-25`}>
                   <IconContext.Provider value={{size: '24px'}}>
                     <BsDot/>
