@@ -4,7 +4,7 @@ import SideMenu from '../SideMenu'
 
 const Header = () => {
   return (
-    <Row className='p-3'>
+    <Row className='p-2'>
       <Col xs="auto" className="align-self-center">
         <SideMenu/>
       </Col>
