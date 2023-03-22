@@ -16,7 +16,7 @@ const SideMenu = () => {
 
   return (
     <>
-      <Button onClick={handleShow} variant="outline-secondary" className="rounded-circle p-2 border-0">
+      <Button onClick={handleShow} variant="outline-dark" className="rounded-circle p-2 border-0">
         <IconContext.Provider value={{size: '36px'}}>
           <FaBars/>
         </IconContext.Provider> 
