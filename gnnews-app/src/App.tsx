@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Main from './pages/Main';
 import { Navigate, Route, Routes } from "react-router-dom"
 import { Container } from 'react-bootstrap';
+import Country from './pages/Country';
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
     <Container>
       <Header/>
       <Routes>
-        <Route path="/" element={<Navigate to="/country/EN" replace={true} />}/>
-        <Route path="/country/:country_code" element={<Main/>} />
+        <Route path="/" element={<Main/>} />
+        <Route path="/country/:country_code" element={<Country/>} />
       </Routes>
     </Container>
     <Footer/>
