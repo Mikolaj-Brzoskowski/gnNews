@@ -2,7 +2,6 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { lorem_ipsum } from '../../data/lorem_ipsum'
 
-
 const Home = () => {
 
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './pages/Main';
-import { Navigate, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import { Container } from 'react-bootstrap';
 import Country from './pages/Country';
 
