@@ -34,7 +34,7 @@ Lista powinna zawierać takie pozycje jak: tytuł, nazwa źródła oraz data pub
 
 ~~Kafelki powinny zawierać dodatkowo miniaturkę (jeżeli występuje) oraz zajawkę.~~
 
-Kliknięcie na danego newsa powinno otworzyć popupa z jego treścią, a także autorem oraz urlem do strony, skąd dany news został pobrany.
+~~Kliknięcie na danego newsa powinno otworzyć popupa z jego treścią, a także autorem oraz urlem do strony, skąd dany news został pobrany.~~
 
 ## Footer
 
