@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import SideMenu from '../SideMenu'
 import type { RootState } from '../../store/store'
 import { useSelector, useDispatch } from 'react-redux'
-import { turnOnCardsView, turnOnListView } from '../../features/news/newsSlice'
+import { turnOnCardsView, turnOnListView } from '../../features/newsSlice'
 
 const Header = () => {
 
