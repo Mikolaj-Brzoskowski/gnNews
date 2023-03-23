@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { Col, Row } from 'react-bootstrap'
 import { lorem_ipsum } from '../../data/lorem_ipsum'
+import { clearNews } from '../../features/newsSlice'
 
 const Home = () => {
+
+  const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(clearNews())
+    }, [])
 
   return (
     <>

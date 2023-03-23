@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Container from 'react-bootstrap/esm/Container';
+import { useAppSelector } from '../../hooks';
 
 const Footer = () => {
 
@@ -9,8 +10,8 @@ const Footer = () => {
     minute:'2-digit',
     second:'2-digit'
   }));
-
-  const [articlesNumber, setArticleNumber] = useState<number>(0)
+  
+  const articlesNumber = useAppSelector((state) => state.news.news?.length)
 
   useEffect(() => {
     let secTimer = setInterval( () => {
