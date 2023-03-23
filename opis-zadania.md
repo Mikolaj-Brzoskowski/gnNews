@@ -28,9 +28,9 @@ Powinno zawierać:
 
 ## Główny content
 
-Powinien zawierać newsy w postaci listy ~~bądź kafelek (w zależności od wybranej opcji w headerze).~~
+~~Powinien zawierać newsy w postaci listy bądź kafelek (w zależności od wybranej opcji w headerze).~~
 
-Lista powinna zawierać takie pozycje jak: tytuł, nazwa źródła oraz data publikacji
+~~Lista powinna zawierać takie pozycje jak: tytuł, nazwa źródła oraz data publikacji~~
 
 ~~Kafelki powinny zawierać dodatkowo miniaturkę (jeżeli występuje) oraz zajawkę.~~
 
