@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button, Card, Col, Modal } from 'react-bootstrap'
+import { Card, Col } from 'react-bootstrap'
 import { useAppSelector } from '../../../hooks'
-import CardModal from '../CardModal'
+import NewsModal from '../NewsModal'
 
 const Cards = () => {
 
@@ -25,7 +25,7 @@ return (
     <>
         {news?.map((el, idx) => (
         <Col key={idx}>
-            <Card className='h-100' onClick={() => handleClick(idx, modalShow)}>
+            <Card className='h-100' onClick={() => handleClick(idx, modalShow)} style={{backgroundColor: "#fbeff3"}}>
             {el.urlToImage ?
             (<Card.Img variant="top" src={`${el.urlToImage}`} /> ) :
             null
@@ -42,7 +42,7 @@ return (
                     Published at: {new Date(el.publishedAt).toLocaleString()}
                 </Card.Text>
                 </Card.Body>
-                <CardModal
+                <NewsModal
                     show={modalShow}
                     onHide={() => handleClick(idx, modalShow)}
                     news={el}

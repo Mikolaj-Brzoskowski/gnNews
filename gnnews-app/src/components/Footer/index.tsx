@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <Container className="mt-auto">
-        <Row className="border-top pt-3 bg-secondary text-white">
+        <Row className="pt-3 bg-secondary text-white rounded-top">
           <Col>
             Current time: {time}
           </Col>

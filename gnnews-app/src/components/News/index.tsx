@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import { useParams } from "react-router-dom"
 import { countries } from '../../data/coutries'
 import { fetchNews } from '../../features/newsSlice'
@@ -25,14 +25,14 @@ const News = () => {
 
   return (
     <>
-    <Row className='p-2'>
-      <Col>
-        <h5>{country} News</h5>
-      </Col>
-    </Row>
-    <Row xs={1} md={3} className='g-4 p-2 flex-1'>
-      {isCardView ? (<Cards/>) : <List/>}
-    </Row>
+      <Row className='p-2'>
+        <Col>
+          <h5>{country} News</h5>
+        </Col>
+      </Row>
+      <Row xs={1} md={3} className='g-4 p-2 flex-1 bg-info-subtle'>
+        {isCardView ? (<Cards/>) : <List/>}
+      </Row>
     </>
   )
 }

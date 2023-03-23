@@ -8,7 +8,7 @@ import Country from './pages/Country';
 
 function App() {
   return (
-    <div className="d-flex flex-column app">
+    <div className="d-flex flex-column app h-100" style={{backgroundColor: "#f3f3f3"}}>
     <Container>
       <Header/>
       <Routes>
