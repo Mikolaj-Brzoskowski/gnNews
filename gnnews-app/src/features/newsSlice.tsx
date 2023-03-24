@@ -42,7 +42,7 @@ const API_KEY: string | undefined = process.env.REACT_APP_API_KEY
 
 export const fetchNews = createAsyncThunk('fetchNews', async (country_code: string | undefined) => {
     const { data } = await axios.get<Response>(
-        `https://newsapi.org/v2/top-headlines?country=${country_code}&apiKey=${API_KEY}`
+        `https://newsapi.org/v2/top-headlines?country=${country_code?.toLowerCase()}&apiKey=${API_KEY}`
         );
     return data;
 })

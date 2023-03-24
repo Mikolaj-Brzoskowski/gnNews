@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import { useParams } from "react-router-dom"
 import { countries } from '../../data/coutries'
 import { fetchNews } from '../../features/newsSlice'
