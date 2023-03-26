@@ -29,7 +29,6 @@ const List = () => {
         key={idx}
         onClick={() => handleClick(idx, modalShow)}
         action
-        style={{backgroundColor: "#fbeff3"}}
         >
         <div className="ms-2 me-auto w-100">
           <div className="fw-bold">{el.title}</div>

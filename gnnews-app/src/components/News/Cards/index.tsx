@@ -25,7 +25,7 @@ return (
     <>
         {news?.map((el, idx) => (
         <Col key={idx}>
-            <Card className='h-100' onClick={() => handleClick(idx, modalShow)} style={{backgroundColor: "#fbeff3"}}>
+            <Card className='h-100' onClick={() => handleClick(idx, modalShow)} >
             {el.urlToImage ?
             (<Card.Img variant="top" src={`${el.urlToImage}`} /> ) :
             null

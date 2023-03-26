@@ -23,7 +23,7 @@ const Header = () => {
       <Col xs="auto" className="align-self-center">
         <SideMenu/>
       </Col>
-      <Col>
+      <Col className="mt-2">
         <Link to='/' className="text-decoration-none text-color-black text-reset">
           <h1 className="text-sm-left mt-1">gnNews</h1>
         </Link>
