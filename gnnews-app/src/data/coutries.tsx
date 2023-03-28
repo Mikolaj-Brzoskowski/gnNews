@@ -53,7 +53,7 @@ export const countries: CountryArrayType =[
 { "code": "TW", "name": "Taiwan", "nazwa": "Tajwan" },
 { "code": "UA", "name": "Ukraine", "nazwa": "Ukraina" },
 { "code": "GB", "name": "United Kingdom", "nazwa": "Wielka Brytania" },
-{ "code": "US", "name": "United States of America", "nazwa": "Stan Zjednoczone" },
+{ "code": "US", "name": "United States of America", "nazwa": "Stany Zjednoczone" },
 { "code": "VE", "name": "Venezuela", "nazwa": "Wenezuela" },
 { "code": "ZA", "name": "South Africa", "nazwa": "Południowa Afryka" },
 { "code": "KR", "name": "South Korea", "nazwa": "Południowa Korea" },

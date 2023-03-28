@@ -15,10 +15,14 @@ type MainParams = {
 const News = () => {
 
   const { country_code } = useParams<MainParams>()
-  const country: string | undefined = countries.find( el => el.code === country_code)?.name
   const dispatch = useAppDispatch()
   const isCardView = useAppSelector((state) => state.news.newsCardsView)
-  const { t } = useTranslation() 
+  const { i18n } = useTranslation() 
+
+  const conditionalMenuRender = () => {
+    if (i18n.language === 'en') return (countries.find( el => el.code === country_code)?.name)
+    if (i18n.language === 'pl') return (countries.find( el => el.code === country_code)?.nazwa)
+  }
 
   useEffect(() => {
     dispatch(fetchNews(country_code))
@@ -29,7 +33,7 @@ const News = () => {
     <>
       <Row className='p-2'>
         <Col>
-          <h5>{country} {t('news')}</h5>
+          <h5>{conditionalMenuRender()}</h5>
         </Col>
       </Row>
       <Row xs={1} md={3} className='g-4 p-2 flex-1 bg-info-subtle'>
