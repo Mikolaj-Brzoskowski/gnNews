@@ -1,7 +1,10 @@
 import React from 'react'
 import { Button, Modal } from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
 
 const NewsModal = (props: any) => {
+
+    const { t } = useTranslation() 
     
     if (props.modalkey === props.modalid) return (
       <Modal
@@ -19,13 +22,13 @@ const NewsModal = (props: any) => {
             {props.news.content}
         </Modal.Body>
         <Modal.Body className="overflow-scroll">
-            Read more at: <a href={`${props.news.url}`} target="_blank" rel="noopener noreferrer">{props.news.url}</a>
+        {t('more')} <a href={`${props.news.url}`} target="_blank" rel="noopener noreferrer">{props.news.url}</a>
         </Modal.Body>
         <Modal.Footer>
             <Modal.Body>
-            Author: {props.news.author}
+            {t('author')} {props.news.author}
             </Modal.Body>
-          <Button onClick={props.onHide}>Close</Button>
+          <Button onClick={props.onHide}>{t('close')}</Button>
         </Modal.Footer>
       </Modal>
     );

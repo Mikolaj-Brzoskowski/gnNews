@@ -1,0 +1,19 @@
+{
+    "en": "English",
+    "pl": "Polish",
+    "articles": "No. of articles:",
+    "time": "Current time:",
+    "homepage": "Home page",
+    "news": "News", 
+    "info": "Information",
+    "like": "Like:",
+    "dislike": "Dislike:",
+    "cards": "Change display to cards",
+    "list": "Change display to list",
+    "language": "Language:",
+    "source": "Source:",
+    "publish": "Published at:",
+    "more": "Read more at:",
+    "author": "Author:",
+    "close": "Close"
+}

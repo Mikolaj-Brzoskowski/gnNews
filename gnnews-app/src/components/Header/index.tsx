@@ -7,6 +7,8 @@ import SideMenu from '../SideMenu'
 import type { RootState } from '../../store/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { turnOnCardsView, turnOnListView } from '../../features/newsSlice'
+import { Tooltip } from 'react-tooltip'
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
 
@@ -17,6 +19,7 @@ const Header = () => {
 
   const isCardViewOn = useSelector((state: RootState) => state.news.newsCardsView)
   const dispatch = useDispatch()
+  const { t } = useTranslation();
   
   return (
     <Row className='p-2'>
@@ -32,16 +35,18 @@ const Header = () => {
           {isCardViewOn 
           ? 
           (
-          <Button variant="outline-secondary" className="rounded-circle p-1 border-0" onClick={(e) => dispatch(turnOnListView())}>
+          <Button variant="outline-secondary" className="rounded-circle p-1 border-0" onClick={(e) => dispatch(turnOnListView())} data-tooltip-id="button-1" data-tooltip-content={`${t('list')}`}>
           <IconContext.Provider value={{size: '36px', color: 'black'}}>
             <AiOutlineUnorderedList/>
-          </IconContext.Provider> 
+          </IconContext.Provider>
+          <Tooltip id="button-1" />
         </Button>) 
           : 
-          (<Button variant="outline-secondary" className="rounded-circle p-1 border-0" onClick={(e) => dispatch(turnOnCardsView())}>
+          (<Button variant="outline-secondary" className="rounded-circle p-1 border-0" onClick={(e) => dispatch(turnOnCardsView())} data-tooltip-id="button-2" data-tooltip-content={`${t('cards')}`}>
           <IconContext.Provider value={{size: '36px', color: 'black'}}>
             <AiOutlineAppstore/>
           </IconContext.Provider> 
+          <Tooltip id="button-2"/>
         </Button>)
         }
         </Col>
@@ -53,13 +58,13 @@ const Header = () => {
           </Button>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Information</Modal.Title>
+              <Modal.Title>{t('info')}</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Like: </Modal.Body>
-            <Modal.Body>Dislike: </Modal.Body>
+            <Modal.Body>{t('like')} </Modal.Body>
+            <Modal.Body>{t('dislike')} </Modal.Body>
             <Modal.Footer>
               <Button variant="dark" onClick={handleClose}>
-                Okay
+              {t('close')}
               </Button>
             </Modal.Footer>
           </Modal>

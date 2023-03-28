@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, Col } from 'react-bootstrap'
 import { useAppSelector } from '../../../hooks'
 import NewsModal from '../NewsModal'
+import { useTranslation } from 'react-i18next';
 
 const Cards = () => {
 
@@ -9,6 +10,7 @@ const news = useAppSelector((state) => state.news.news)
 
 const [modalShow, setModalShow] = React.useState(false);
 const [modalId, setmodalId] = React.useState(-1);
+const { t } = useTranslation()
 
 const handleClick = (idx: number, showMode: boolean) => {
     if (showMode) {
@@ -36,10 +38,10 @@ return (
                     {el.description}
                 </Card.Text>
                 <Card.Text>
-                    Source: {el.source.name}
+                {t('source')} {el.source.name}
                 </Card.Text>
                 <Card.Text className='justify-'>
-                    Published at: {new Date(el.publishedAt).toLocaleString()}
+                {t('publish')} {new Date(el.publishedAt).toLocaleString()}
                 </Card.Text>
                 </Card.Body>
                 <NewsModal

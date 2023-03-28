@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, ListGroup, Row } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 import { useAppSelector } from '../../../hooks'
 import NewsModal from '../NewsModal'
 
@@ -9,6 +10,7 @@ const List = () => {
 
   const [modalShow, setModalShow] = React.useState(false);
   const [modalId, setmodalId] = React.useState(-1);
+  const { t } = useTranslation() 
 
   const handleClick = (idx: number, showMode: boolean) => {
     if (showMode) {
@@ -34,8 +36,8 @@ const List = () => {
           <div className="fw-bold">{el.title}</div>
           <Container>
           <Row className="mt-2">
-            <Col xs={12} md={9}> Source: {el.source.name}</Col>
-            <Col xs={12} md={3}>Published at: {new Date(el.publishedAt).toLocaleString()}</Col>
+            <Col xs={12} md={9}> {t('source')} {el.source.name}</Col>
+            <Col xs={12} md={3}> {t('publish')} {new Date(el.publishedAt).toLocaleString()}</Col>
           </Row>
           </Container>
         </div>

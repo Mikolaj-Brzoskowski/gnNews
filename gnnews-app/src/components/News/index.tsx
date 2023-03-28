@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 import { useParams } from "react-router-dom"
 import { countries } from '../../data/coutries'
 import { fetchNews } from '../../features/newsSlice'
@@ -17,6 +18,7 @@ const News = () => {
   const country: string | undefined = countries.find( el => el.code === country_code)?.name
   const dispatch = useAppDispatch()
   const isCardView = useAppSelector((state) => state.news.newsCardsView)
+  const { t } = useTranslation() 
 
   useEffect(() => {
     dispatch(fetchNews(country_code))
@@ -27,7 +29,7 @@ const News = () => {
     <>
       <Row className='p-2'>
         <Col>
-          <h5>{country} News</h5>
+          <h5>{country} {t('news')}</h5>
         </Col>
       </Row>
       <Row xs={1} md={3} className='g-4 p-2 flex-1 bg-info-subtle'>
