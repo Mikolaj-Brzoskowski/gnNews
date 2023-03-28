@@ -5,6 +5,7 @@ import { IconContext } from "react-icons";
 import { Button, ListGroup, Offcanvas } from 'react-bootstrap';
 import { countries } from '../../data/coutries';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const SideMenu = () => {
 
@@ -13,10 +14,38 @@ const SideMenu = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
 
   const handleClick = (countryCode: string) => {
     navigate(`/country/${countryCode}`); 
     handleClose();
+  }
+  
+  const conditionalMenuRender = () => {
+    if (i18n.language === 'en') return (
+      countries.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).map( (country) => (
+        <ListGroup.Item className='d-flex flex-row align-items-center' action onClick={() => handleClick(country.code)} key={country.code}>
+          <div className={`fib fi-${country.code.toLowerCase()} h-25 w-25`}>
+            <IconContext.Provider value={{size: '24px'}}>
+              <BsDot/>
+            </IconContext.Provider> 
+          </div>
+          {country.name}
+        </ListGroup.Item>
+      ))
+    )
+    if (i18n.language === 'pl') return (
+      countries.sort((a,b) => (a.nazwa > b.nazwa) ? 1 : ((b.nazwa > a.nazwa) ? -1 : 0)).map( (country) => (
+        <ListGroup.Item className='d-flex flex-row align-items-center' action onClick={() => handleClick(country.code)} key={country.code}>
+          <div className={`fib fi-${country.code.toLowerCase()} h-25 w-25`}>
+            <IconContext.Provider value={{size: '24px'}}>
+              <BsDot/>
+            </IconContext.Provider> 
+          </div>
+          {country.nazwa}
+        </ListGroup.Item>
+      ))
+    )
   }
 
   return (
@@ -34,16 +63,7 @@ const SideMenu = () => {
         </Offcanvas.Header>
         <Offcanvas.Body className="w-100">
           <ListGroup variant="flush">
-            {countries.sort().map( (country) => (
-              <ListGroup.Item className='d-flex flex-row align-items-center' action onClick={() => handleClick(country.code)} key={country.code}>
-                <div className={`fib fi-${country.code.toLowerCase()} h-25 w-25`}>
-                  <IconContext.Provider value={{size: '24px'}}>
-                    <BsDot/>
-                  </IconContext.Provider> 
-                </div>
-                {country.name}
-              </ListGroup.Item>
-            ))}
+            {conditionalMenuRender()}
           </ListGroup>
         </Offcanvas.Body>
       </Offcanvas>
