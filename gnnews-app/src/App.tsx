@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './pages/Main';
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import { Container } from 'react-bootstrap';
 import Country from './pages/Country';
 
@@ -14,6 +14,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Main/>} />
         <Route path="/country/:country_code" element={<Country/>} />
+        <Route
+        path="*"
+        element={<Navigate to="/" />}
+      />
       </Routes>
     </Container>
     <Footer/>
