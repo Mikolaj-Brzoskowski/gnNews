@@ -54,5 +54,9 @@
   },
   "devDependencies": {
     "@types/redux-logger": "^3.0.9"
-  }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }}
 }

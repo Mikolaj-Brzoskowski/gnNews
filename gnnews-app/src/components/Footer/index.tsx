@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
-import Container from 'react-bootstrap/esm/Container';
-import { useAppSelector } from '../../hooks';
+import { Col, Row, Container } from 'react-bootstrap'
+import { useAppSelector } from '../../hooks/index';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {

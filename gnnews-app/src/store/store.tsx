@@ -6,7 +6,8 @@ export const store = configureStore({
   reducer: {
     news: newsReducer
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+  //concat(logger)
 })
 
 

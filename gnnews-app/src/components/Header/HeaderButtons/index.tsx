@@ -26,14 +26,26 @@ const HeaderButtons = () => {
                 {isCardViewOn 
                 ? 
                 (
-                <Button variant="outline-secondary" className="rounded-circle p-1 border-0" onClick={(e) => dispatch(turnOnListView())} data-tooltip-id="button-1" data-tooltip-content={`${t('list')}`}>
+                <Button 
+                variant="outline-secondary" 
+                className="rounded-circle p-1 border-0" 
+                onClick={(e) => dispatch(turnOnListView())} 
+                data-tooltip-id="button-1" 
+                data-tooltip-content={`${t('list')}`}
+                data-testid="button-1">
                     <IconContext.Provider value={{size: '36px', color: 'black'}}>
                         <AiOutlineUnorderedList/>
                     </IconContext.Provider>
                     <Tooltip id="button-1" />
                 </Button>) 
                     : 
-                (<Button variant="outline-secondary" className="rounded-circle p-1 border-0" onClick={(e) => dispatch(turnOnCardsView())} data-tooltip-id="button-2" data-tooltip-content={`${t('cards')}`}>
+                (<Button 
+                variant="outline-secondary" 
+                className="rounded-circle p-1 border-0" 
+                onClick={(e) => dispatch(turnOnCardsView())} 
+                data-tooltip-id="button-2" 
+                data-tooltip-content={`${t('cards')}`}
+                data-testid="button-2">
                     <IconContext.Provider value={{size: '36px', color: 'black'}}>
                         <AiOutlineAppstore/>
                     </IconContext.Provider> 
@@ -56,7 +68,10 @@ const HeaderButtons = () => {
                     Tłumaczenie strony było chyba najłatwiejsze, tym samym najprzyjemniejsze. Poza tym porównywałem sobie użycie Bootstrapa w przeciwieństwie do TailWinda, którego używam
                     w tym momencie w innym swoim projekcie, dzięki temu wiem mniej więcej, którego frameworka lepiej używać i jakie oba z frameworków mają wady/zalety. </Modal.Body>
                     <Modal.Body>{t('dislike')} Najwięcej problemów sprawiła mi paczka związana z flagami państw, których użyłem do wyświetlania w SideMenu. Będąc szczerym 
-                    nadal nie wiem w jaki sposób ona nadal działa, ale cieszę się, że działa w ogóle. Poza tym było parę dziwnych sytuacji z ustawianiem flexa/grida, ale to standard.</Modal.Body>
+                    nadal nie wiem w jaki sposób ona nadal działa, ale cieszę się, że działa w ogóle. Poza tym było parę dziwnych sytuacji z ustawianiem flexa/grida, ale to w sumie standard.
+                    Testy też były problematyczne, ponieważ przez komponent Offcanvas z react-bootstrap nie byłem w stanie przetestować headera (jakieś problemy z Ref, nie potrafiłem tego naprawić),
+                    nie wspominając o tym, że pierwszy raz się nimi zajmowałem, przez co zajęły mi bardzo dużo czasu, a końcowo mało ich zaimplementowałem.
+                    </Modal.Body>
                     <Modal.Footer>
                         <Button variant="dark" onClick={handleClose}>{t('close')}</Button>
                     </Modal.Footer>

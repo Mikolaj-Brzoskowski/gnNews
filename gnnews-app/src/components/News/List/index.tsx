@@ -24,7 +24,7 @@ const List = () => {
   }
   
   return (
-    <ListGroup className="w-100 p-2">
+    <ListGroup className="w-100 p-2" data-testid="list">
       {news?.map((el, idx) => (
         <ListGroup.Item
         className="d-flex justify-content-between align-items-start"

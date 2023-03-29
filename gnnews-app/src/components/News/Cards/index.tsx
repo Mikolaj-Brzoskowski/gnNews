@@ -26,7 +26,7 @@ const handleClick = (idx: number, showMode: boolean) => {
 return (
     <>
         {news?.map((el, idx) => (
-        <Col key={idx}>
+        <Col key={idx} data-testid="cards">
             <Card className='h-100' onClick={() => handleClick(idx, modalShow)} >
             {el.urlToImage ?
             (<Card.Img variant="top" src={`${el.urlToImage}`} /> ) :

@@ -37,7 +37,7 @@ const News = () => {
         </Col>
       </Row>
       <Row xs={1} md={3} className='g-4 p-2 flex-1 bg-info-subtle'>
-        {isCardView ? (<Cards/>) : <List/>}
+        {isCardView ? <Cards/> : <List/>}
       </Row>
     </>
   )
