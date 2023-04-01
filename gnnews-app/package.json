@@ -1,6 +1,6 @@
 {
   "name": "gnnews-app",
-  "homepage": "https://mikolaj-brzoskowski.github.io/gnnews-app",
+  "homepage": "https://mikolaj-brzoskowski.github.io/gnNews/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
